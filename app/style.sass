@@ -1,0 +1,13 @@
+@mixin default_container($flex-direction: row, $row_gap, $column_gap)
+  flex-direction: $flex-direction
+  row-gap: $row_gap
+  column-gap: $column_gap
+  display: flex
+
+.page_container
+  @include default_container(column, 5px, 0px)
+.paginate
+  @include default_container(row, 0px, 5px)
+  justify-content: center
+
+

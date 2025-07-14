@@ -1,0 +1,44 @@
+@mixin default_container($flex-direction: row, $row_gap, $column_gap)
+  flex-direction: $flex-direction
+  row-gap: $row_gap
+  column-gap: $column_gap
+  display: flex
+*
+  margin: 0
+  padding: 0
+body
+  margin: 20px
+
+.posts_container
+  @include default_container(column, 5px, 0px)
+
+.navbar
+  @include default_container(row, 0px, 0px)
+  justify-content: space-between
+
+.comments_container
+  @include default_container(column, 20px, 0px)
+
+.detailed_post_container
+  @include default_container(column, 10px, 0px)
+
+.search_input
+  align-self: center
+  padding: 5px
+  font-size: 20px
+  border-radius: 5px
+  border: darkslategray 1px solid
+
+.post_container
+  border: 2px darkslategray solid
+  padding: 10px
+  text-decoration: none
+  color: black
+  &:hover
+    border: darkslategray 4px solid
+    padding: 8px
+    cursor: pointer
+.panel_container
+  @include default_container(row, 0px, 10px)
+.chosen_page
+  opacity: 0.6
